@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex LaunchX</title>
+    <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./pokedex.css">
+</head>
+<body>
+    <section id="contenedorPokedex">
+        <h1 class="pokeFont">Pokédex LaunchX</h1>
+        <img id="pokedex" src="./assets/IMGS/KalosPokedex.png" alt="Pokedex de la región de Kalos">
+        <img id="pokemonster" src="./assets/IMGS/Pokeball.png" alt="Resultado de busqueda">
+        <div id="navegacion">
+            <input id="pokeSearch" name="pokeSearch" type="text" placeholder="Arceus">
+            <img id="pokeGO" src="./assets/IMGS/GO.png" alt="Realizar busqueda" onclick="fetchPokemon('go')">
+            <img id="leftArrow" src="./assets/IMGS/arrow-left-solid.svg" alt="flecha izquierda" onclick="fetchPokemon('izquierda')" width="50">
+            <img id="rightArrow" src="./assets/IMGS/arrow-right-solid.svg" alt="flecha derecha" onclick="fetchPokemon('derecha')" width="50">
+            <p id="creditos" class="pixelFontCredits">
+                Project by: <a href="https://github.com/FerchoArceo/" class="pixelFontCredits" target="w">Fernando Arceo Olivares</a>.<br>
+                Powered by: <a href="https://pokeapi.co/" class="pixelFontCredits" target="w">PokéAPI</a>.<br>
+                All rights of the images goes to <br>their respective creators.
+            </p>
+        </div>
+        <div id="pokeInfoText">
+            <p class="pixelFontBig">Pokedex ID:</p>
+            <p class="pixelFontBig" id="pokeNumber">- - - - -</p><br>
+            <p class="pixelFontBig">Pokemon name:</p>
+            <p class="pixelFontBig" id="pokeName">- - - - -</p><br>
+            <p class="pixelFontBig" id="typeTag">Pokemon type:</p>
+            <p class="pixelFontBig" id="pokeType">- - - - -</p>
+        </div>
+        <div id="pokeStatsText">
+            <div id="statsText1">
+                <p class="pixelFont">Stats:</p>
+                <p class="pixelFont" id="stat1">HP: --</p>
+                <p class="pixelFont" id="stat2">ATTACK: --</p>
+                <p class="pixelFont" id="stat3">DEFENSE: --</p>
+            </div>
+            <div id="statsText2">
+                <p class="pixelFont" id="stat4">SPECIAL-ATTACK: --</p>
+                <p class="pixelFont" id="stat5">SPECIAL-DEFENSE: --</p>
+                <p class="pixelFont" id="stat6">SPEED: --</p>
+            </div>
+        </div>
+        <div id="pokeMovesText">
+            <div id="movesText1">
+                <p class="pixelFont">Moves:</p>
+                <p class="pixelFont" id="move1">- - - - -</p>
+                <p class="pixelFont" id="move2">- - - - -</p>
+                <p class="pixelFont" id="move3">- - - - -</p>
+            </div>
+            <div id="movesText2">
+                <p class="pixelFont" id="move4">- - - - -</p>
+                <p class="pixelFont" id="move5">- - - - -</p>
+                <p class="pixelFont" id="move6">- - - - -</p>
+            </div>
+        </div>
+        <div id="contenedorAzul"></div>
+        <div id="marco1"></div>
+        <div id="contenedorGris"></div>
+        <div id="marco2"></div>
+    </section>
+</body>
+<footer>
+    <script src="./pokedex.js"></script>
+</footer>
+</html>

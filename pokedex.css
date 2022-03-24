@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+:root{
+    --color-primary: #ffffff;
+    --color-text-bg: #D6D6CE;
+    --color-blue-ui: #29A2E9;
+    --color-title: #FFCB05;
+}
+
+body {
+    background-size: 200px;
+    background-repeat: repeat;
+    background-image: url(./assets/IMGS/grass-bg.jpg);
+}
+
+/* header y footer */
+
+.pokeFont {
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 48px;
+    color: var(--color-title);
+    text-shadow: 1px 1px 2px black;
+}
+
+.pixelFontBig {
+    font-family: 'VT323', monospace;
+    font-size: 22px;
+}
+
+.pixelFont {
+    font-family: 'VT323', monospace;
+    font-size: 12px;
+}
+
+.pixelFontCredits {
+    font-family: 'VT323', monospace;
+    font-size: 18px;
+    color: var(--color-primary);
+    text-shadow: 1px 1px 2px grey;
+}
+
+/* Estilos para el diseño de la Pokedex*/
+
+#contenedorPokedex{
+    /* Centrar la pokedex en pantalla */
+    display: grid;
+    grid-template-columns: 1fr 80% 1fr;
+    grid-template-rows: 1fr 80% 1fr;
+}
+
+#pokedex, #pokemonster, #pokeSearch, #contenedorAzul, #marco1, #contenedorGris, 
+#marco2, #pokeGO, #pokeInfoText, #pokeStatsText, #pokeMovesText, #navegacion, #creditos {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: center;
+}
+
+#contenedorPokedex #pokedex {
+    max-width: 500px;
+    height: 100%;
+    overflow: hidden;
+}
+
+#contenedorPokedex h1 {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+
+    z-index: 1;
+
+    position: absolute;
+    top: -2rem;
+}
+
+#contenedorPokedex #pokemonster {
+    z-index: 10;
+    width: 150px;
+    position: relative;
+    top: -100px;
+    left: -85px;
+}
+
+#contenedorPokedex #pokeName {
+    z-index: 10;
+}
+
+#contenedorPokedex #contenedorAzul {
+    z-index: 2;
+
+    background-color: var(--color-blue-ui);
+    padding: 1px 1px;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    width: 350px;
+    height: 200px;
+
+    position: relative;
+    top: -100px;
+}
+
+#contenedorPokedex #marco1 {
+    z-index: 1;
+
+    background-color: var(--color-primary);
+    padding: 1px 1px;
+    border-radius: 10px;
+
+    width: 355px;
+    height: 205px;
+
+    position: relative;
+    top: -100px;
+}
+
+#contenedorPokedex #contenedorGris {
+    z-index: 2;
+
+    background-color: var(--color-text-bg);
+    padding: 1px 1px;
+    border-radius: 10px;
+
+    width: 350px;
+    height: 75px;
+
+    position: relative;
+    top: 44px;
+}
+
+#contenedorPokedex #marco2 {
+    z-index: 1;
+
+    background-color: var(--color-primary);
+    padding: 1px 1px;
+    border-radius: 10px;
+
+    width: 355px;
+    height: 80px;
+
+    position: relative;
+    top: 44px;
+}
+
+#navegacion {
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    position: relative;
+    top: 150px;
+    height: 120px;
+    width: 350px;
+}
+
+#navegacion #pokeSearch{
+    width: 150px;
+}
+
+#navegacion #pokeGO {
+    width: 100px;
+    position: relative;
+    top: 1rem;
+}
+
+#navegacion #leftArrow {
+    height: 50px;
+    position: relative;
+    align-self: center;
+    top: -35px;
+    left: -75px;
+}
+
+#navegacion #rightArrow {
+    height: 50px;
+    position: relative;
+    align-self: center;
+    top: -85px;
+    left: 75px;
+}
+
+#creditos {
+    text-align: center;
+    text-decoration: none;
+    align-self: center;
+    position: relative;
+    transform: translate(0%, -50%);
+    top: 170px;
+}
+
+#contenedorPokedex #pokeInfoText {
+    z-index: 8;
+    text-align: left;
+    width: 150px;
+    height: 180px;
+    overflow: hidden;
+
+    position: relative;
+    top: -100px;
+    left: 75px;
+}
+
+#contenedorPokedex #pokeStatsText {
+    z-index: 8;
+    text-align: left;
+    position: relative;
+    top: 35px;
+    left: -80px;
+}
+
+#contenedorPokedex #pokeStatsText #statsText1 {
+    width: 85px;
+    height: 70px;
+    overflow: hidden;
+
+    position: relative;
+    top: 35px;
+    left: -40px;
+}
+
+#contenedorPokedex #pokeStatsText #statsText2 {
+    width: 100px;
+    height: 40px;
+    overflow: hidden;
+
+    position: relative;
+    top: -23px;
+    left: 25px;
+}
+
+#contenedorPokedex #pokeMovesText {
+    z-index: 8;
+    text-align: left;
+    position: relative;
+    top: 42px;
+    left: 85px;
+}
+
+#contenedorPokedex #pokeMovesText #movesText1 {
+    width: 85px;
+    height: 70px;
+    overflow: hidden;
+
+    position: relative;
+    top: 35px;
+    left: -40px;
+}
+
+#contenedorPokedex #pokeMovesText #movesText2 {
+    width: 85px;
+    height: 54px;
+    overflow: hidden;
+
+    position: relative;
+    top: -23px;
+    left: 40px;
+}
+
+input[type=text] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: transparent;
+    background-image: url("./assets/IMGS/magnifying-glass-solid.svg");
+    background-position: 10px; 
+    background-repeat: no-repeat;
+    background-size: 20px;
+    padding: 12px 20px 12px 50px;
+}
